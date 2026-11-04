@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajajinagar 3D Printers | Precision 3D Printing & Design Studio</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                bg: '#FAF7F2',
+                card: '#FFFFFF',
+                dark: '#18181B',
+                charcoal: '#27272A',
+                orange: '#E66A00',
+                orangeHover: '#C65A00',
+                orangeLight: '#FFF4EB',
+                border: '#E4E4E7',
+                sketch: '#3F3F46'
+              }
+            },
+            fontFamily: {
+              sans: ['Plus Jakarta Sans', 'sans-serif'],
+              sketch: ['Caveat', 'cursive']
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      .sketch-border {
+        border: 2px solid #27272A;
+        box-shadow: 4px 4px 0px #27272A;
+        transition: all 0.2s ease-in-out;
+      }
+      .sketch-border:hover {
+        transform: translate(-2px, -2px);
+        box-shadow: 6px 6px 0px #27272A;
+      }
+      .sketch-badge {
+        border: 1.5px solid #E66A00;
+        box-shadow: 2px 2px 0px #E66A00;
+      }
+      .sketch-card {
+        background-color: #FFFFFF;
+        border: 2px solid #27272A;
+        box-shadow: 5px 5px 0px #27272A;
+      }
+      .sketch-btn {
+        border: 2px solid #18181B;
+        box-shadow: 3px 3px 0px #18181B;
+      }
+      .sketch-btn:active {
+        transform: translate(2px, 2px);
+        box-shadow: 1px 1px 0px #18181B;
+      }
+    </style>
+</head>
+<body class="bg-brand-bg text-brand-dark font-sans antialiased selection:bg-brand-orange selection:text-white">
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-brand-dark text-white text-xs font-semibold py-2 px-4 text-center border-b border-zinc-800">
+      <span class="inline-flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-brand-orange animate-pulse"></span>
+        Serving Rajajinagar, Malleshwaram, Vijayanagar & All Bangalore | Fast Pickup & Local Delivery
+      </span>
+    </div>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-50 bg-brand-bg/90 backdrop-blur-md border-b-2 border-brand-dark">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          
+          <!-- BRAND LOGO -->
+          <a href="#" class="flex items-center gap-3 group">
+            <div class="w-12 h-12 rounded-xl bg-brand-orangeLight border-2 border-brand-dark flex items-center justify-center p-1 group-hover:rotate-3 transition-transform">
+              <!-- Custom Ganesha + 3D Printer SVG Logo -->
+              <svg viewBox="0 0 100 100" class="w-full h-full text-brand-dark fill-current">
+                <path d="M20 20 H80 V30 H75 V70 H80 V80 H20 V70 H25 V30 H20 Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M35 30 H65 V35 H55 L50 45 L45 35 H35 Z" fill="none" stroke="currentColor" stroke-width="3"/>
+                <line x1="30" y1="70" x2="70" y2="70" stroke="currentColor" stroke-width="4"/>
+                <!-- Ganesha Silhouette -->
+                <path d="M50 48 C46 48 43 51 43 55 C43 58 45 60 48 60 C50 60 51 62 50 64 C49 66 46 66 45 64" fill="none" stroke="#E66A00" stroke-width="3" stroke-linecap="round"/>
+                <circle cx="50" cy="51" r="2" fill="#E66A00"/>
+                <path d="M44 53 C40 52 38 56 42 58 M56 53 C60 52 62 56 58 58" fill="none" stroke="#E66A00" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-sketch text-2xl font-bold leading-none text-brand-dark">Rajajinagar</span>
+              <span class="text-xs font-extrabold tracking-wider text-brand-orange uppercase">3D Printers</span>
+            </div>
+          </a>
+
+          <!-- DESKTOP NAV LINKS -->
+          <nav class="hidden md:flex items-center gap-8 font-semibold text-sm">
+            <a href="#services" class="hover:text-brand-orange transition-colors">Services</a>
+            <a href="#how-it-works" class="hover:text-brand-orange transition-colors">How It Works</a>
+            <a href="#contact" class="hover:text-brand-orange transition-colors">Contact</a>
+            <a href="https://www.instagram.com/rajajinagar3dprinters/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-brand-orange transition-colors">
+              <i class="fa-brands fa-instagram text-lg text-brand-orange"></i>
+              <span>@rajajinagar3dprinters</span>
+            </a>
+          </nav>
+
+          <!-- HEADER CTA -->
+          <div class="hidden sm:flex items-center gap-3">
+            <a href="https://wa.me/919108443649?text=Hello%20Rajajinagar%203D%20Printers,%20I%20would%20like%20to%20inquire%20about%20a%203D%20printing..." target="_blank" class="sketch-btn bg-brand-orange hover:bg-brand-orangeHover text-white px-5 py-2.5 rounded-lg text-sm font-bold flex items-center gap-2 transition-all">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              <span>Order on WhatsApp</span>
+            </a>
+          </div>
+
+          <!-- MOBILE MENU BUTTON -->
+          <button id="menuBtn" class="md:hidden p-2 rounded-lg border-2 border-brand-dark bg-white">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- MOBILE MENU DRAWER -->
+      <div id="mobileMenu" class="hidden md:hidden border-t-2 border-brand-dark bg-brand-bg px-4 pt-4 pb-6 space-y-3">
+        <a href="#services" class="block font-semibold py-2 hover:text-brand-orange">Services</a>
+        <a href="#how-it-works" class="block font-semibold py-2 hover:text-brand-orange">How It Works</a>
+        <a href="#contact" class="block font-semibold py-2 hover:text-brand-orange">Contact Us</a>
+        <a href="https://www.instagram.com/rajajinagar3dprinters/" target="_blank" class="flex items-center gap-2 font-semibold py-2 text-brand-orange">
+          <i class="fa-brands fa-instagram text-lg"></i>
+          <span>Follow on Instagram</span>
+        </a>
+        <a href="https://wa.me/919108443649?text=Hello%20Rajajinagar%203D%20Printers,%20I%20would%20like%20to%20inquire%20about%20a%203D%20printing..." target="_blank" class="w-full sketch-btn bg-brand-orange text-white py-3 rounded-lg font-bold text-center flex items-center justify-center gap-2">
+          <i class="fa-brands fa-whatsapp text-xl"></i>
+          <span>Order via WhatsApp</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="py-12 md:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- HERO TEXT CONTENT -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 sketch-badge bg-brand-orangeLight px-3 py-1.5 rounded-full text-xs font-bold text-brand-orange">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Rajajinagar's Premier 3D Printing Hub</span>
+          </div>
+          
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-brand-dark leading-none">
+            Turn Your 3D Ideas Into <span class="text-brand-orange underline decoration-wavy decoration-brand-orange/40">Physical Reality</span>
+          </h1>
+
+          <p class="text-lg text-zinc-600 max-w-2xl font-medium">
+            High-precision FDM 3D printing services for custom models, detailed idols, engineering prototypes, and custom gifts. Fast local turnaround in Bangalore.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+            <a href="#contact" class="sketch-btn bg-brand-orange hover:bg-brand-orangeHover text-white px-8 py-4 rounded-xl font-bold text-center flex items-center justify-center gap-3 text-base transition-all">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Get Custom Quote</span>
+            </a>
+            <a href="https://wa.me/919108443649?text=Hello%20Rajajinagar%203D%20Printers,%20I%20would%20like%20to%20inquire%20about%20a%203D%20printing..." target="_blank" class="sketch-btn bg-white hover:bg-zinc-50 text-brand-dark px-6 py-4 rounded-xl font-bold text-center flex items-center justify-center gap-3 text-base transition-all">
+              <i class="fa-brands fa-whatsapp text-xl text-emerald-600"></i>
+              <span>Direct WhatsApp Chat</span>
+            </a>
+          </div>
+
+          <!-- QUICK HIGHLIGHTS -->
+          <div class="grid grid-cols-3 gap-4 pt-6 border-t-2 border-zinc-200">
+            <div>
+              <div class="font-extrabold text-xl text-brand-dark">High Precision</div>
+              <div class="text-xs text-zinc-500 font-medium">0.1mm Layer Detail</div>
+            </div>
+            <div>
+              <div class="font-extrabold text-xl text-brand-dark">Fast Delivery</div>
+              <div class="text-xs text-zinc-500 font-medium">Same-day pickup</div>
+            </div>
+            <div>
+              <div class="font-extrabold text-xl text-brand-dark">PLA / PETG / ABS</div>
+              <div class="text-xs text-zinc-500 font-medium">Multi-material options</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- HERO BRAND EMBLEM CARD -->
+        <div class="lg:col-span-5">
+          <div class="sketch-card rounded-2xl p-8 text-center space-y-6 relative overflow-hidden bg-white">
+            <div class="absolute -right-12 -top-12 w-32 h-32 bg-brand-orangeLight rounded-full blur-2xl"></div>
+            
+            <div class="w-48 h-48 mx-auto relative bg-brand-orangeLight rounded-2xl border-2 border-brand-dark p-4 flex items-center justify-center">
+              <!-- Full Logo Graphic -->
+              <svg viewBox="0 0 200 200" class="w-full h-full text-brand-dark">
+                <!-- Printer Frame -->
+                <rect x="30" y="30" width="140" height="130" rx="8" fill="none" stroke="currentColor" stroke-width="6"/>
+                <line x1="20" y1="160" x2="180" y2="160" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
+                <!-- Extruder Assembly -->
+                <rect x="80" y="45" width="40" height="25" rx="4" fill="#27272A"/>
+                <path d="M92 70 L100 82 L108 70 Z" fill="#E66A00"/>
+                <!-- Filament Spool Side -->
+                <path d="M160 50 C175 50 175 110 160 110" fill="none" stroke="#E66A00" stroke-width="8" stroke-linecap="round"/>
+                <!-- Bed -->
+                <rect x="45" y="140" width="110" height="10" rx="2" fill="#27272A"/>
+                <!-- Detailed Ganesha Idol Motif -->
+                <g transform="translate(75, 85)">
+                  <path d="M25 5 C15 5 10 15 10 25 C10 35 15 45 25 45 C35 45 40 35 40 25 C40 15 35 5 25 5 Z" fill="none" stroke="#E66A00" stroke-width="3"/>
+                  <circle cx="25" cy="18" r="4" fill="#E66A00"/>
+                  <!-- Trunk -->
+                  <path d="M25 25 Q20 35 28 36 Q32 36 30 30" fill="none" stroke="#E66A00" stroke-width="3" stroke-linecap="round"/>
+                  <!-- Crown -->
+                  <path d="M20 8 L25 0 L30 8 Z" fill="#E66A00"/>
+                </g>
+              </svg>
+            </div>
+
+            <div>
+              <h2 class="font-sketch text-3xl font-bold text-brand-dark">Rajajinagar 3D Printers</h2>
+              <p class="text-sm font-semibold text-brand-orange uppercase tracking-wider mt-1">Quality Custom Manufacturing</p>
+            </div>
+
+            <div class="bg-zinc-50 rounded-xl p-4 border border-zinc-200 text-left space-y-2 text-xs font-medium">
+              <div class="flex items-center gap-2 text-zinc-700">
+                <i class="fa-solid fa-check text-brand-orange"></i>
+                <span>Custom CAD 3D Design Assistance</span>
+              </div>
+              <div class="flex items-center gap-2 text-zinc-700">
+                <i class="fa-solid fa-check text-brand-orange"></i>
+                <span>Clean hand-sketched precision & finishing</span>
+              </div>
+              <div class="flex items-center gap-2 text-zinc-700">
+                <i class="fa-solid fa-check text-brand-orange"></i>
+                <span>Direct Expert Technical Support</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="py-16 bg-white border-y-2 border-brand-dark">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto space-y-3 mb-12">
+          <span class="font-sketch text-2xl text-brand-orange font-bold">What We Print</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark">Our 3D Printing Services</h2>
+          <p class="text-zinc-600 text-sm font-medium">From intricate religious idols to heavy-duty engineering parts, we handle all custom 3D printing requirements.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- SERVICE CARD 1 -->
+          <div class="sketch-card p-6 rounded-xl space-y-4">
+            <div class="w-12 h-12 bg-brand-orangeLight rounded-lg border-2 border-brand-dark flex items-center justify-center text-brand-orange text-2xl font-bold">
+              <i class="fa-solid fa-om"></i>
+            </div>
+            <h3 class="font-extrabold text-xl text-brand-dark">Idols & Figurines</h3>
+            <p class="text-xs text-zinc-600 leading-relaxed font-medium">
+              Detailed religious idols (like Ganesha, Shiva), miniature statues, movie collectibles, and customized decorative pieces.
+            </p>
+          </div>
+
+          <!-- SERVICE CARD 2 -->
+          <div class="sketch-card p-6 rounded-xl space-y-4">
+            <div class="w-12 h-12 bg-brand-orangeLight rounded-lg border-2 border-brand-dark flex items-center justify-center text-brand-orange text-2xl font-bold">
+              <i class="fa-solid fa-gears"></i>
+            </div>
+            <h3 class="font-extrabold text-xl text-brand-dark">Engineering Parts</h3>
+            <p class="text-xs text-zinc-600 leading-relaxed font-medium">
+              Functional prototypes, custom gears, enclosures, brackets, mechanical replacements, and architectural scale models.
+            </p>
+          </div>
+
+          <!-- SERVICE CARD 3 -->
+          <div class="sketch-card p-6 rounded-xl space-y-4">
+            <div class="w-12 h-12 bg-brand-orangeLight rounded-lg border-2 border-brand-dark flex items-center justify-center text-brand-orange text-2xl font-bold">
+              <i class="fa-solid fa-pen-ruler"></i>
+            </div>
+            <h3 class="font-extrabold text-xl text-brand-dark">Custom 3D CAD Design</h3>
+            <p class="text-xs text-zinc-600 leading-relaxed font-medium">
+              Don't have a 3D model? Send us rough sketches, photos, or physical dimensions and we'll design the CAD file for you.
+            </p>
+          </div>
+
+          <!-- SERVICE CARD 4 -->
+          <div class="sketch-card p-6 rounded-xl space-y-4">
+            <div class="w-12 h-12 bg-brand-orangeLight rounded-lg border-2 border-brand-dark flex items-center justify-center text-brand-orange text-2xl font-bold">
+              <i class="fa-solid fa-gift"></i>
+            </div>
+            <h3 class="font-extrabold text-xl text-brand-dark">Gifts & Batch Printing</h3>
+            <p class="text-xs text-zinc-600 leading-relaxed font-medium">
+              Personalized keychains, custom nameplates, corporate mementos, and bulk small-batch production runs.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS SECTION -->
+    <section id="how-it-works" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto space-y-3 mb-12">
+        <span class="font-sketch text-2xl text-brand-orange font-bold">Simple Process</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark">How To Get Your Job Printed</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        
+        <div class="sketch-card p-8 rounded-2xl relative bg-white space-y-4">
+          <div class="w-10 h-10 rounded-full bg-brand-orange text-white font-extrabold flex items-center justify-center text-lg border-2 border-brand-dark">
+            1
+          </div>
+          <h3 class="font-extrabold text-xl">Send Requirements</h3>
+          <p class="text-xs text-zinc-600 font-medium leading-relaxed">
+            Share your 3D model STL/OBJ file, reference photo, or rough sketch along with required dimensions via WhatsApp or form.
+          </p>
+        </div>
+
+        <div class="sketch-card p-8 rounded-2xl relative bg-white space-y-4">
+          <div class="w-10 h-10 rounded-full bg-brand-orange text-white font-extrabold flex items-center justify-center text-lg border-2 border-brand-dark">
+            2
+          </div>
+          <h3 class="font-extrabold text-xl">Get Quick Quote</h3>
+          <p class="text-xs text-zinc-600 font-medium leading-relaxed">
+            We evaluate the weight, print time, and best filament material (PLA, PETG, ABS) and provide an instant custom quote.
+          </p>
+        </div>
+
+        <div class="sketch-card p-8 rounded-2xl relative bg-white space-y-4">
+          <div class="w-10 h-10 rounded-full bg-brand-orange text-white font-extrabold flex items-center justify-center text-lg border-2 border-brand-dark">
+            3
+          </div>
+          <h3 class="font-extrabold text-xl">Print & Delivery</h3>
+          <p class="text-xs text-zinc-600 font-medium leading-relaxed">
+            Your item is precision-printed with high fill density. Pick up directly at Rajajinagar or get doorstep delivery across Bangalore.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT & ORDERING SECTION -->
+    <section id="contact" class="py-16 bg-white border-t-2 border-brand-dark">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid lg:grid-cols-12 gap-12">
+          
+          <!-- CONTACT INFO & DIRECT TALK -->
+          <div class="lg:col-span-5 space-y-8">
+            <div>
+              <span class="font-sketch text-2xl text-brand-orange font-bold">Get In Touch</span>
+              <h2 class="text-3xl font-extrabold text-brand-dark mt-1">Start Your 3D Print Order</h2>
+              <p class="text-zinc-600 text-sm mt-2 font-medium">
+                Have a project or question? Reach out directly to our expert technical lead.
+              </p>
+            </div>
+
+            <div class="space-y-4">
+              
+              <!-- EXPERT TALK HIGHLIGHT -->
+              <div class="sketch-card p-5 rounded-xl bg-brand-orangeLight border-2 border-brand-dark space-y-2">
+                <div class="text-xs font-bold text-brand-orange uppercase tracking-wider">Direct Technical Expert Consultation</div>
+                <div class="text-2xl font-extrabold text-brand-dark flex items-center gap-2">
+                  <i class="fa-solid fa-headset text-brand-orange"></i>
+                  <span>9108443649</span>
+                </div>
+                <p class="text-xs text-zinc-600 font-medium">Call or WhatsApp for immediate project technical discussion.</p>
+              </div>
+
+              <!-- PHONE NUMBERS -->
+              <div class="sketch-card p-5 rounded-xl space-y-3">
+                <h4 class="font-extrabold text-sm text-brand-dark uppercase tracking-wider">Contact Numbers</h4>
+                <div class="space-y-2 text-sm font-semibold text-zinc-800">
+                  <div class="flex items-center justify-between">
+                    <span class="text-zinc-500 font-normal">Primary / Expert:</span>
+                    <a href="tel:9108443649" class="hover:text-brand-orange font-bold">9108443649</a>
+                  </div>
+                  <div class="flex items-center justify-between border-t border-zinc-100 pt-2">
+                    <span class="text-zinc-500 font-normal">Secondary Contact:</span>
+                    <a href="tel:9964255418" class="hover:text-brand-orange font-bold">9964255418</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- SOCIAL & LOCATION -->
+              <div class="sketch-card p-5 rounded-xl space-y-3">
+                <h4 class="font-extrabold text-sm text-brand-dark uppercase tracking-wider">Location & Social</h4>
+                <div class="space-y-2 text-xs font-medium text-zinc-700">
+                  <div class="flex items-start gap-3">
+                    <i class="fa-solid fa-location-dot text-brand-orange text-base mt-0.5"></i>
+                    <span>Rajajinagar, Bengaluru, Karnataka, India</span>
+                  </div>
+                  <div class="flex items-center gap-3 pt-2 border-t border-zinc-100">
+                    <i class="fa-brands fa-instagram text-brand-orange text-base"></i>
+                    <a href="https://www.instagram.com/rajajinagar3dprinters/" target="_blank" class="hover:text-brand-orange font-bold text-sm">
+                      @rajajinagar3dprinters
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- CONTACT / INQUIRY FORM -->
+          <div class="lg:col-span-7">
+            <div class="sketch-card p-8 rounded-2xl bg-brand-bg">
+              <h3 class="text-2xl font-extrabold text-brand-dark mb-2">Send Print Inquiry</h3>
+              <p class="text-xs text-zinc-600 mb-6 font-medium">Submitting this form will automatically format your request and open directly in WhatsApp.</p>
+
+              <form id="inquiryForm" class="space-y-4">
+                <div>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-brand-dark mb-1">Your Name *</label>
+                  <input type="text" id="custName" required placeholder="Enter your full name" class="w-full px-4 py-3 rounded-lg border-2 border-brand-dark focus:outline-none focus:ring-2 focus:ring-brand-orange text-sm font-medium">
+                </div>
+
+                <div class="grid sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-brand-dark mb-1">Phone Number *</label>
+                    <input type="tel" id="custPhone" required placeholder="10-digit mobile number" class="w-full px-4 py-3 rounded-lg border-2 border-brand-dark focus:outline-none focus:ring-2 focus:ring-brand-orange text-sm font-medium">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-brand-dark mb-1">Material Preference</label>
+                    <select id="custMaterial" class="w-full px-4 py-3 rounded-lg border-2 border-brand-dark focus:outline-none focus:ring-2 focus:ring-brand-orange text-sm font-medium bg-white">
+                      <option value="Not Sure / Suggest Best">Not Sure / Suggest Best</option>
+                      <option value="PLA (Standard)">PLA (Standard)</option>
+                      <option value="PETG (Durable & Tough)">PETG (Durable & Tough)</option>
+                      <option value="ABS (Heat Resistant)">ABS (Heat Resistant)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-brand-dark mb-1">Project Details / Job Description *</label>
+                  <textarea id="custDetails" rows="4" required placeholder="Describe what you want to print, estimated size/dimensions, color preference, or mention if you have an STL file..." class="w-full px-4 py-3 rounded-lg border-2 border-brand-dark focus:outline-none focus:ring-2 focus:ring-brand-orange text-sm font-medium"></textarea>
+                </div>
+
+                <button type="submit" class="w-full sketch-btn bg-brand-orange hover:bg-brand-orangeHover text-white py-4 rounded-xl font-bold text-base flex items-center justify-center gap-3 transition-all">
+                  <i class="fa-brands fa-whatsapp text-2xl"></i>
+                  <span>Send Inquiry via WhatsApp</span>
+                </button>
+              </form>
+
+              <div id="successMessage" class="hidden mt-4 p-4 bg-emerald-100 border-2 border-emerald-600 rounded-lg text-emerald-800 text-xs font-bold text-center">
+                Redirecting to WhatsApp with your inquiry details...
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark text-white pt-12 pb-8 border-t-2 border-brand-dark">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-3 gap-8 pb-8 border-b border-zinc-800">
+          
+          <div class="space-y-3">
+            <div class="flex items-center gap-2">
+              <span class="font-sketch text-2xl font-bold text-white">Rajajinagar</span>
+              <span class="text-xs font-bold text-brand-orange uppercase">3D Printers</span>
+            </div>
+            <p class="text-xs text-zinc-400 font-medium leading-relaxed">
+              Precision 3D printing studio based in Rajajinagar, Bengaluru. Specializing in high-detail models, prototyping, idols, and custom CAD services.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-sm text-brand-orange uppercase tracking-wider mb-3">Quick Contact</h4>
+            <ul class="space-y-2 text-xs text-zinc-300 font-medium">
+              <li>Expert Consultation: <a href="tel:9108443649" class="text-white hover:text-brand-orange font-bold">9108443649</a></li>
+              <li>Secondary Phone: <a href="tel:9964255418" class="text-white hover:text-brand-orange font-bold">9964255418</a></li>
+              <li>Instagram: <a href="https://www.instagram.com/rajajinagar3dprinters/" target="_blank" class="text-white hover:text-brand-orange font-bold">@rajajinagar3dprinters</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-sm text-brand-orange uppercase tracking-wider mb-3">Service Coverage</h4>
+            <p class="text-xs text-zinc-400 font-medium leading-relaxed">
+              Rajajinagar, Malleshwaram, Basaveshnagar, Vijayanagar, Yeshwanthpur, and Express Courier / Dunzo delivery across all Bangalore regions.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="pt-6 text-center text-xs text-zinc-500 font-medium">
+          &copy; 2026 Rajajinagar 3D Printers. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- JAVASCRIPT HANDLERS -->
+    <script>
+      // Mobile Drawer Toggle
+      const menuBtn = document.getElementById('menuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // Contact Form WhatsApp Redirection
+      const inquiryForm = document.getElementById('inquiryForm');
+      const successMessage = document.getElementById('successMessage');
+
+      inquiryForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById('custName').value;
+        const phone = document.getElementById('custPhone').value;
+        const material = document.getElementById('custMaterial').value;
+        const details = document.getElementById('custDetails').value;
+
+        // Custom exact lead string request
+        const textMsg = encodeURIComponent(
+          `Hello Rajajinagar 3D Printers, I would like to inquire about a 3D printing job.\n\n` +
+          `*Name:* ${name}\n` +
+          `*Phone:* ${phone}\n` +
+          `*Material Preference:* ${material}\n` +
+          `*Project Details:* ${details}`
+        );
+
+        successMessage.classList.remove('hidden');
+
+        setTimeout(() => {
+          window.open(`https://wa.me/919108443649?text=${textMsg}`, '_blank');
+          inquiryForm.reset();
+          successMessage.classList.add('hidden');
+        }, 800);
+      });
+    </script>
+</body>
+</html>
